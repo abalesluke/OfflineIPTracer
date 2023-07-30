@@ -28,6 +28,12 @@ def get_ipv4_decimal(ipv4_addr):
     octet = ipv4_addr.split(".")
     return (int(octet[0]) * 16777216) + (int(octet[1]) * 65536) + (int(octet[2]) * 256) + int(octet[3])
 
+def banner():
+    print("""
+The IP Database/Informations used in this project was from: IP2Location.com
+Please comply with their Terms of use and license.
+    """)
+
 if(__name__=="__main__"):
     ipv4_addr = input("Enter IPv4 address: ").strip()
     ipv4_decimal = get_ipv4_decimal(ipv4_addr)
