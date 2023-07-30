@@ -35,6 +35,7 @@ Please comply with their Terms of use and license.
     """)
 
 if(__name__=="__main__"):
+    banner()
     ipv4_addr = input("Enter IPv4 address: ").strip()
     ipv4_decimal = get_ipv4_decimal(ipv4_addr)
     ip_info = ipv4_trace(ipv4_decimal)
