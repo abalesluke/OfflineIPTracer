@@ -49,11 +49,11 @@ public class Main{
 
     public static int get_ipv4_decimal(String ipv4_addr){
         String[] octet = ipv4_addr.split("\\.");
-        int oct1 = intz(octet[0]);
-        int oct2 = intz(octet[1]);
-        int oct3 = intz(octet[2]);
-        int oct4 = intz(octet[3]);
-        return (oct1 * 16777216) + (oct2 * 65536) + (oct3 * 256) + (oct4);
+        int ipv4_decimal = 0;
+        for(int i=0; i<4;i++){
+            ipv4_decimal=(ipv4_decimal<<8)+intz(octet[i]);
+        }
+        return ipv4_decimal;
     }
 
 	public static void main(String[] args) {
